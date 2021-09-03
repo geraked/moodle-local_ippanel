@@ -25,7 +25,7 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version   = 2021080200;
+$plugin->version   = 2021090300;
 $plugin->requires  = 2018000000;
 $plugin->component = 'local_ippanel';
-$plugin->release   = "1.0.0";
+$plugin->release   = "1.0.1";
