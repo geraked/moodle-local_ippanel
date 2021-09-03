@@ -158,7 +158,7 @@ if ($op == 6) {
 
     try {
         $client = new \IPPanel\Client($apiKey);
-        $statuses = $client->fetchStatuses($bulkid, $page, 50);
+        $statuses = $client->fetchStatuses($bulkid, $page, 10);
 
         foreach ($statuses[0] as $s) {
             $sql = 'SELECT u.id, u.firstname, u.lastname
