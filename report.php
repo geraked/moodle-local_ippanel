@@ -30,7 +30,9 @@ require_once($CFG->libdir . '/authlib.php');
 require_once($CFG->libdir . '/tablelib.php');
 require_once('report_table.php');
 
-admin_externalpage_setup('local_ippanel_report');
+if (is_siteadmin($USER)) {
+    admin_externalpage_setup('local_ippanel_report');
+}
 
 $download = optional_param('download', '', PARAM_ALPHA);
 

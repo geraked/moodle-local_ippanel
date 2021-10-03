@@ -28,7 +28,9 @@ require_once("../../cohort/lib.php");
 require_once($CFG->libdir . '/adminlib.php');
 require_once($CFG->libdir . '/authlib.php');
 
-admin_externalpage_setup('local_ippanel_send');
+if (is_siteadmin($USER)) {
+    admin_externalpage_setup('local_ippanel_send');
+}
 
 $acl = array_filter(array_map('trim', preg_split('/\r\n|[\r\n]/', get_config('local_ippanel', 'acl'))));
 
